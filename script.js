@@ -118,7 +118,7 @@ console.log('Exercise 2 Correct Result: ',
 let sortedByBirthYear = []
 
 // Enter your solution code here:
-sortedByBirthYear = inventors.sort((a, b) => a.year - b.passed)
+sortedByBirthYear = inventors.sort((a, b) => a.year - b.year)
 
 // Check your return value:
 console.log('Exercise 3 My Result: ', sortedByBirthYear)
@@ -240,7 +240,7 @@ let isAdultPresent = null
 // Enter your solution code here:
 
 isAdultPresent = devs.some(person =>{
-    return person.year >= 18
+    return ((2024 - person.year) >= 18);
 })
 
 // Check your return value:
@@ -259,7 +259,8 @@ console.log('Exercise 6 Correct Result: ', true)
 let isEveryone19OrOlder = null
 
 isEveryone19OrOlder = devs.every(person =>{
-    return person.year == 19;
+    return ((2024 - person.year) >= 19);
+    
 })
 // Enter your solution code here:
 
